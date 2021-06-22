@@ -37,6 +37,7 @@ package Dist::Zilla::PluginBundle::AlienBuild {
       # metaprovides
       # execdir
       ['Prereqs' => { -phase => 'runtime', perl => '5.008004' } ],
+      ['AlienBuild' => { ':version' => '0.31', alienfile_meta => 1 } ],
     ],
   );
 

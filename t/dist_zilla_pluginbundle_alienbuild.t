@@ -16,6 +16,7 @@ subtest 'revision = 1' => sub {
         path('source', '.git', 'this-should-get-pruned') => "",
         path('source', 'README.pod') => "prune me\n",
         path('source', 'Changes') => "{{\$NEXT}}\n  - Initial version\n",
+        path('source', 'alienfile') => 'use alienfile;',
       },
     },
   );
@@ -38,6 +39,7 @@ subtest 'revision = 1' => sub {
     META.yml
     Makefile.PL
     README
+    alienfile
     dist.ini
     lib/Alien/libfoo.pm
     t/00-report-prereqs.dd
