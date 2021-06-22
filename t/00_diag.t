@@ -16,6 +16,8 @@ $modules{$_} = $_ for qw(
   ExtUtils::MakeMaker
   Moose
   Path::Tiny
+  PerlX::Maybe
+  PerlX::Maybe::XS
   Test2::Mock
   Test2::V0
   Test::DZil
