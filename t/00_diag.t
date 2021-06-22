@@ -16,6 +16,7 @@ $modules{$_} = $_ for qw(
   Dist::Zilla::Plugin::RunExtraTests
   Dist::Zilla::Plugin::Test::Compile
   Dist::Zilla::Plugin::Test::ReportPrereqs
+  Dist::Zilla::Role::MintingProfile::ShareDir
   Dist::Zilla::Role::PluginBundle::Config::Slicer
   Dist::Zilla::Role::PluginBundle::Easy
   Dist::Zilla::Role::PluginBundle::PluginRemover
@@ -25,6 +26,7 @@ $modules{$_} = $_ for qw(
   Ref::Util
   Test2::V0
   Test::DZil
+  Test::File::ShareDir::Module
   namespace::autoclean
 );
 
