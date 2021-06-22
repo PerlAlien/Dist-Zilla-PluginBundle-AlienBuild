@@ -17,10 +17,17 @@ subtest 'basic' => sub {
   my $iter = $mint_dir->iterator({ recurse => 1 });
   my @found_files;
   while (my $path = $iter->()) {
-    push @found_files, $path->relative($mint_dir)->stringify if -f $path;
+    if(-f $path)
+    {
+      push @found_files, $path->relative($mint_dir)->stringify if -f $path;
+      note " << $found_files[-1] >>";
+      note $path->slurp_utf8;
+    }
   }
 
   is [sort @found_files], [qw(
+    Changes
+    alienfile
     dist.ini
     lib/Alien/libfoo.pm
   )], 'minted the correct files';
