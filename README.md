@@ -18,7 +18,9 @@ uses the [\[AlienBuild\]](https://metacpan.org/pod/Dist::Zilla::Plugin::AlienBui
 the provided [alienfile](https://metacpan.org/pod/alienfile).  This bundle does not currently support [Module::Build](https://metacpan.org/pod/Module::Build) (though it may in the future)
 or [Module::Build::Tiny](https://metacpan.org/pod/Module::Build::Tiny) (which is fundamentally incapable of supporting the [Alien](https://metacpan.org/pod/Alien) concept).  Only revision 5
 of [\[@Starter\]](https://metacpan.org/pod/Dist::Zilla::PluginBundle::Starter) is currently supported, future revisions may be added in the
-future.
+future.  This plugin bundle will also use [\[AlienBase::Doc\]](https://metacpan.org/pod/Dist::Zilla::Plugin::AlienBase::Doc) to provide some
+minimal documentation boilerplate for your alien if the ["alien\_name"](#alien_name) property is provided and the appropriate
+template variables are in your `.pm` file.
 
 This is the default configuration for this bundle:
 
@@ -69,6 +71,31 @@ perl = 5.008004
 :version = 0.31
 alienfile_meta = 1
 ```
+
+# PROPERTIES
+
+In addition to the properties supported by [\[@Starter\]](https://metacpan.org/pod/Dist::Zilla::PluginBundle::Starter), this bundle has these
+properties:
+
+- alien\_clean\_install
+
+    Sets the [clean\_install property on Alien::Build::MM](https://metacpan.org/pod/Alien::Build::MM#clean_install).
+
+- alien\_name
+
+    If provided then the [\[AlienBase::Doc\]](https://metacpan.org/pod/Dist::Zilla::Plugin::AlienBase::Doc) plugin will be used to generate basic
+    documentation for your alien.
+
+- alien\_see\_also
+
+    Specifies modules that should be listed in the `SEE ALSO` section of the documentation.  See the
+    [see\_also property in \[AlienBase::Doc\]](https://metacpan.org/pod/Dist::Zilla::Plugin::AlienBase::Doc#see_also).  If this property is
+    set you need to also provide ["alien\_name"](#alien_name).
+
+- alien\_type
+
+    Specifies the type of alien.  See the [type property in \[AlienBase::Doc\]](https://metacpan.org/pod/Dist::Zilla::Plugin::AlienBase::Doc#type).
+    If this property is set you need to also provide ["alien\_name"](#alien_name).
 
 # SEE ALSO
 
