@@ -3,14 +3,14 @@ use Dist::Zilla::PluginBundle::AlienBuild;
 use Path::Tiny qw( path );
 use Test::DZil;
 
-subtest 'revision = 1' => sub {
+subtest 'revision = 5' => sub {
 
   my $tzil = Builder->from_config(
     { dist_root => 'does-not-exist' },
     {
       add_files => {
         path('source', 'dist.ini') => simple_ini({ version => '0.01' },
-          ['@AlienBuild' => { revision => 1 }],
+          ['@AlienBuild', { revision => 5 }],
         ),
         path('source', 'lib', 'Alien', 'libfoo.pm') => "package Alien::libfoo;\nour \$VERSION = '0.01';\n1",
         path('source', '.git', 'this-should-get-pruned') => "",
