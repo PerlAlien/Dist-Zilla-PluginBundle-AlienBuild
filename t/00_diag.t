@@ -12,7 +12,6 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   Dist::Zilla::Plugin::AlienBuild
   Dist::Zilla::PluginBundle::Starter
-  Dist::Zilla::Role::MintingProfile::ShareDir
   ExtUtils::MakeMaker
   Moose
   Path::Tiny
@@ -21,7 +20,6 @@ $modules{$_} = $_ for qw(
   Test2::Mock
   Test2::V0
   Test::DZil
-  Test::File::ShareDir::Module
   namespace::autoclean
 );
 
