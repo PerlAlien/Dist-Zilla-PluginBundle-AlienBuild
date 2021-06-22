@@ -11,19 +11,12 @@ my $post_diag;
 
 $modules{$_} = $_ for qw(
   Dist::Zilla::Plugin::AlienBuild
-  Dist::Zilla::Plugin::Pod2Readme
-  Dist::Zilla::Plugin::PodSyntaxTests
-  Dist::Zilla::Plugin::RunExtraTests
-  Dist::Zilla::Plugin::Test::Compile
-  Dist::Zilla::Plugin::Test::ReportPrereqs
+  Dist::Zilla::PluginBundle::Starter
   Dist::Zilla::Role::MintingProfile::ShareDir
-  Dist::Zilla::Role::PluginBundle::Config::Slicer
-  Dist::Zilla::Role::PluginBundle::Easy
-  Dist::Zilla::Role::PluginBundle::PluginRemover
   ExtUtils::MakeMaker
   Moose
   Path::Tiny
-  Ref::Util
+  Test2::Mock
   Test2::V0
   Test::DZil
   Test::File::ShareDir::Module
