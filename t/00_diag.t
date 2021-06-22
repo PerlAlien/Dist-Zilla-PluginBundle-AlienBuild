@@ -10,8 +10,10 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
+  Dist::Zilla::Plugin::AlienBuild
   Dist::Zilla::Plugin::Pod2Readme
   Dist::Zilla::Plugin::PodSyntaxTests
+  Dist::Zilla::Plugin::RunExtraTests
   Dist::Zilla::Plugin::Test::Compile
   Dist::Zilla::Plugin::Test::ReportPrereqs
   Dist::Zilla::Role::PluginBundle::Config::Slicer
