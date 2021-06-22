@@ -69,7 +69,7 @@ In your dist.ini:
 
 This L<Dist::Zilla> plugin bundle extends the L<[@Starter]|Dist::Zilla::PluginBundle::Starter> bundle to work with
 L<Alien::Build> system.  In particular, it sets the minimum required Perl to that required by L<Alien::Build> and
-uses the L<[AlienBuild]|Dist::Zilla::Plugin::AlienBuild>, which updates your C<Makefile.PL> and prereqs based on
+uses the L<[AlienBuild]|Dist::Zilla::Plugin::AlienBuild> plugin, which updates your C<Makefile.PL> and prereqs based on
 the provided L<alienfile>.  This bundle does not currently support L<Module::Build> (though it may in the future)
 or L<Module::Build::Tiny> (which is fundamentally incapable of supporting the L<Alien> concept).  Only revision 5
 of L<[@Starter]|Dist::Zilla::PluginBundle::Starter> is currently supported, future revisions may be added in the
@@ -82,6 +82,18 @@ This is the default configuration for this bundle:
 =head1 SEE ALSO
 
 =over 4
+
+=item L<Alien>
+
+The Alien concept documentation.
+
+=item L<Alien::Build>
+
+The L<Alien::Build> framework for creating aliens.
+
+=item L<alienfile>
+
+The recipe system used by L<Alien::Build>.
 
 =item L<Dist::Zilla::MinitingProfile::AlienBuild>
 

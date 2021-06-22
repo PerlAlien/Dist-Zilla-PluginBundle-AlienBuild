@@ -14,7 +14,7 @@ In your dist.ini:
 
 This [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) plugin bundle extends the [\[@Starter\]](https://metacpan.org/pod/Dist::Zilla::PluginBundle::Starter) bundle to work with
 [Alien::Build](https://metacpan.org/pod/Alien::Build) system.  In particular, it sets the minimum required Perl to that required by [Alien::Build](https://metacpan.org/pod/Alien::Build) and
-uses the [\[AlienBuild\]](https://metacpan.org/pod/Dist::Zilla::Plugin::AlienBuild), which updates your `Makefile.PL` and prereqs based on
+uses the [\[AlienBuild\]](https://metacpan.org/pod/Dist::Zilla::Plugin::AlienBuild) plugin, which updates your `Makefile.PL` and prereqs based on
 the provided [alienfile](https://metacpan.org/pod/alienfile).  This bundle does not currently support [Module::Build](https://metacpan.org/pod/Module::Build) (though it may in the future)
 or [Module::Build::Tiny](https://metacpan.org/pod/Module::Build::Tiny) (which is fundamentally incapable of supporting the [Alien](https://metacpan.org/pod/Alien) concept).  Only revision 5
 of [\[@Starter\]](https://metacpan.org/pod/Dist::Zilla::PluginBundle::Starter) is currently supported, future revisions may be added in the
@@ -71,6 +71,18 @@ alienfile_meta = 1
 ```
 
 # SEE ALSO
+
+- [Alien](https://metacpan.org/pod/Alien)
+
+    The Alien concept documentation.
+
+- [Alien::Build](https://metacpan.org/pod/Alien::Build)
+
+    The [Alien::Build](https://metacpan.org/pod/Alien::Build) framework for creating aliens.
+
+- [alienfile](https://metacpan.org/pod/alienfile)
+
+    The recipe system used by [Alien::Build](https://metacpan.org/pod/Alien::Build).
 
 - [Dist::Zilla::MinitingProfile::AlienBuild](https://metacpan.org/pod/Dist::Zilla::MinitingProfile::AlienBuild)
 
